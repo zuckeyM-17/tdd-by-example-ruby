@@ -52,5 +52,34 @@ Finished in 0.0014 seconds (files took 0.0787 seconds to load)
 5, 2 という数字がテストコードとソースコードの両方に存在するので排除したい。
 テストはグリーンのまま。
 
+## 第2章 明白な実装
+
+1. テストを書く
+2. 動かす
+3. 正しくする（重複の削除）
+
+```shell script
+$ bundle exec rspec part_one_multiple_currency/spec
+
+money
+  Dollar#times
+    引数に 2 を取るとき
+      金額が 2 倍された Dollar クラスのインスタンスを返却
+    引数に 3 を取るとき
+      金額が 3 倍された Dollar クラスのインスタンスを返却
+
+Finished in 0.00155 seconds (files took 0.08061 seconds to load)
+2 examples, 0 failures
+```
+
+Dollar の副作用をなくす。
+
+連続して呼ばれたとき、期待した振る舞いをしない。
+ということを確認するテストコードを書き、red にする。
+=> あるべきインターフェースを考え実装する。
+
+自信がある場合と自信がない場合で、`仮実装`と`明白な実装`の間を行き来する。
+予期せぬエラーが出たら仮実装
+
 
 
