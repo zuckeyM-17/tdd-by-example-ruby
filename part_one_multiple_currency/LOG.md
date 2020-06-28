@@ -48,5 +48,9 @@ Finished in 0.0014 seconds (files took 0.0787 seconds to load)
 1 example, 0 failures
 ```
 
+テストコードとソースコード重複を削除する。
+5, 2 という数字がテストコードとソースコードの両方に存在するので排除したい。
+テストはグリーンのまま。
+
 
 
