@@ -1,3 +1,5 @@
+require_relative './spec_helper'
+
 RSpec.describe 'money' do
   describe 'Dollar#times' do
     context 'when Dallar Class initialized with Integer 5, '\
