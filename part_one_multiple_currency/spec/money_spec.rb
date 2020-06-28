@@ -7,7 +7,7 @@ RSpec.describe 'money' do
       it 'changes amount attr to 10' do
         five = Dollar.new(5)
         five.times(2)
-        expect(file.reload.amount).to eq 10
+        expect(five.amount).to eq 10
       end
     end
   end

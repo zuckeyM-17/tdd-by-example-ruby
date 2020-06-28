@@ -27,5 +27,26 @@ rspec ./part_one_multiple_currency/spec/money_spec.rb:5 # money Dollar#times whe
 
 ```
 
-`Dollar` がなくてエラーが出る。
+テストがfailする。
+
+* Dollar Class がない
+* constructor がない（デフォルトは引数なし）
+* #times method がない
+* amount attribute がない
+
+グリーンになる
+
+```shell script
+$ bundle exec rspec part_one_multiple_currency/spec
+
+money
+  Dollar#times
+    when Dallar Class initialized with Integer 5, and #times method is called with Integer 2 as first args
+      changes amount attr to 10
+
+Finished in 0.0014 seconds (files took 0.0787 seconds to load)
+1 example, 0 failures
+```
+
+
 
